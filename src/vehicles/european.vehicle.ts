@@ -59,10 +59,11 @@ export default class EuropeanVehicle extends Vehicle {
         await http.post(`/api/v2/spa/vehicles/${this.vehicleConfig.id}/control/temperature`, {
           body: {
             action: 'start',
-            hvacType: 0,
+            hvacType: 1,
             options: {
               defrost: config.defrost,
-              heating1: config.windscreenHeating ? 1 : 0,
+              frontWindowHeating: 0,
+              heating1: config.heatingFeatures,
             },
             tempCode: celciusToTempCode(REGIONS.EU, config.temperature),
             unit: config.unit,

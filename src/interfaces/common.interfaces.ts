@@ -419,6 +419,7 @@ export interface VehicleStartOptions {
 export interface VehicleClimateOptions {
   defrost: boolean;
   windscreenHeating: boolean;
+  heatingFeatures: number;
   temperature: number;
   unit: string;
 }
