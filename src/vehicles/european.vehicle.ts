@@ -62,7 +62,7 @@ export default class EuropeanVehicle extends Vehicle {
             hvacType: 0,
             options: {
               defrost: config.defrost,
-              heating1: config.heatingFeatures,
+              heating1: config.heatingFeatures == 0 ? 0 : 1,
             },
             tempCode: celciusToTempCode(REGIONS.EU, config.temperature),
             unit: config.unit,
